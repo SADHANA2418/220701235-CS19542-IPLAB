@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Limit Checker</title>
+</head>
+<body>
+
+<h2>Credit Limit Checker</h2>
+
+<script>
+    function checkCreditLimit() {
+        // Prompt user for account details
+        let accountNumber = prompt("Enter your account number:", "");
+        let beginningBalance = parseInt(prompt("Enter your balance at the beginning of the month:", ""));
+        let charges = parseInt(prompt("Enter the total of all items charged this month:", ""));
+        let credits = parseInt(prompt("Enter the total of all credits applied this month:", ""));
+        let creditLimit = parseInt(prompt("Enter your allowed credit limit:", ""));
+
+        // Calculate new balance
+        let newBalance = beginningBalance + charges - credits;
+
+        // Display the new balance
+        alert(`Account Number: ${accountNumber}\nNew Balance: $${newBalance}`);
+
+        // Check if the credit limit is exceeded
+        if (newBalance > creditLimit) {
+            document.body.innerHTML += `<p style="color:red;">Credit limit exceeded for account ${accountNumber}!</p>`;
+        } else {
+            document.body.innerHTML += `<p>Credit limit not exceeded for account ${accountNumber}.</p>`;
+        }
+    }
+
+    // Call the function on page load
+    checkCreditLimit();
+</script>
+
+</body>
+</html>

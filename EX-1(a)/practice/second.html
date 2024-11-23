@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        <input type="text" name="name"><br>
+        <input type="text" name="email"><br>
+        <input type="submit" name="ok" value="ok" onclick="validate()">
+    </form>
+    <script>
+        function validate(){
+            var name=document.f1.name.value;
+            var email=document.f1.email.value;
+            var f=email.indexOf("@");
+            var g=email.indexOf(".");
+            if(name==""){
+            alert("enter your name please");
+            return false;    
+        }
+           if(!isNaN(name)){
+           alert("enter only characters");
+            return false;   
+        }
+        if(email==""){
+        alert("enter the email id");
+         return false;    
+    }
+    if(f==-1 || g==-1){
+    alert("enter a valid email id");
+    return false;    
+}
+return true;
+        }
+    </script>
+</body>
+</html>

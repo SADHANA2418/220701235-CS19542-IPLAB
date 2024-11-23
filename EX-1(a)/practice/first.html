@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!--  <h2>celsius to farenheit convertor</h2>
+    <form>
+        enter the value:<input type="text" name="val"><br>
+        <button onclick="ctof()">C TO F</button>
+        <button onclick="ftoc()">F TO C</button>
+    </form>
+    <form><input type="text" name="st"></form>
+    <button onclick="extra()">EXTRACT</button>-->
+    <script>
+        //var xval=window.prompt("enter a num:");
+        //var yval=window.prompt("enter a num");
+        //var zval=window.prompt("enter a num:");
+       // var x=parseInt(xval);
+       // var result;
+       // var y=parseInt(yval);
+       /* var z=parseInt(zval);
+        var result=x*y*z;
+        document.write("the result is:"+result);*/
+        // x!=y?(x>y?window.alert(x+"is larger than"+y):window.alert(y+"is larger than"+x)):document.write("these are equal");
+//electrticity bill
+/*if(x<=50) result=x*0.50;
+else if(50>x && x<=100) result=50*0.50+(x-50)*0.75;
+else if(100<x && x<=200) result=(50*0.5)+(50*0.75)+(x-100)*1.20;
+else if(x>200)result=50*0.5+50*0.75+100*1.20+(x-200)*1.5;
+if(result>=400)result=result+result*0.2;
+document.write("your electtricity bill amount is :"+result);*/
+//converion of celsius to farenheit
+/*var ip=parseInt(document.getElementByName("val"));
+var f,c;
+function ctof(ip){
+f=9/5*(c+32);
+document.write("the farenheit value is:"+f);
+}
+function ctof(ip){
+c=9/5*(f-32);
+document.write("the celsius value is:"+c);
+}*/
+//string splitting
+
+/*var str=window.prompt("enter the number:");
+function extra(str){
+var parts=str.split(" ");
+var t1=parts[0].replace("(","").replace(")","");
+ document.write("the area code"+t1);
+ var t2=parts[1].split("-")[0];
+ var t3=parts[1].split("-")[1];
+document.write("the phone number is:"+t2+t3);
+}*/
+var arr=new Array(10);
+var flag=0;
+var count=0;
+var num;
+for(var i=0;i<10;i++){
+    num=parseInt(window.prompt("enter a num:"));
+    flag=0;
+    for(var j=0;j<count;j++){
+        if(arr[j]==num){
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0 && num<=100 && num>=10){
+        arr[count]=num;
+        count++;
+    }
+}
+for(var i=0;i<count;i++)
+document.write(arr[i]);
+    </script>
+</body>
+</html>
