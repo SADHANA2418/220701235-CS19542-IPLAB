@@ -1,0 +1,77 @@
+@charset "ISO-8859-1";
+
+/* Styles for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the form */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+/* General input styles */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="radio"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #00acc1;
+    border-radius: 5px;
+}
+
+/* Styles for radio buttons */
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Styles for labels */
+label {
+    margin-bottom: 5px;
+    display: block;
+    color: #00796b;
+    font-weight: bold;
+}
+
+/* Styles for the submit button */
+input[type="submit"] {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #004d40;
+}
+
+/* Section styling */
+form > div {
+    margin-bottom: 15px;
+}
+
+/* Styling for the form title */
+form h2 {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
